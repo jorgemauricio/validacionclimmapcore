@@ -18,6 +18,8 @@ os.system('clear')
 filesList = [x for x in os.listdir('data') if x.endswith('.csv')]
 
 #%% generate info for AGS
+#%% -101.62 > Long > -103.09
+#%% 22.58 > Lat > 21.54
 for i in filesList:
 	print('***** Processing Ags: {}'.format(i))
 	fileTitle = 'data/{}'.format(i)
@@ -35,6 +37,9 @@ for i in filesList:
 	processingFileTitle = 'ags/{}'.format(i)
 	temporalData.to_csv(processingFileTitle, index=False)
 
+#%% generate info for Sonora
+#%% -107.57 > Long > -115.61
+#%% 33.02 > Lat > 25.70
 for i in filesList:
 	print('***** Processing Sonora: {}'.format(i))
 	fileTitle = 'data/{}'.format(i)
@@ -175,7 +180,7 @@ textFile = open(fileName, "w")
 textFile.write(dataBaseStructuretTest)
 textFile.close()
 
-#%% Processing Ags
+#%% Processing Sonora
 print('***** Processing Weather Stations from Sonora \n')
 
 #%% Read data
@@ -188,7 +193,7 @@ sonoraWeatherStations = sonoraWeatherStations.dropna()
 dataBaseStructure = "Station,Type,State,Lat,Long,Year,Month,Day,Rain,Hr,Tpro" + "\n"
 dataBaseStructuretTest =  "Station,State,Lat,Long,Year,Month,Day,Rain,Hr,Tpro,RainWRF,HrWRF,TproWRF" + "\n"
 
-#%% iterate ags
+#%% iterate Sonora
 for index, row in sonoraWeatherStations.iterrows():
 	
 	# generate title for csv file from the WRF
