@@ -97,5 +97,11 @@ ENV/
 # mkdocs documentation
 /site
 
+# data folders
+/data
+/ags
+/dataStations
+/sonora
+
 # mypy
 .mypy_cache/
