@@ -174,7 +174,7 @@ textFile = open(fileName, "w")
 textFile.write(dataBaseStructure)
 textFile.close()
 
-#%% Save to csv data 1
+#%% Save to csv data 2
 fileName = 'dataFromAguascalientestTest.csv'
 textFile = open(fileName, "w")
 textFile.write(dataBaseStructuretTest)
@@ -297,7 +297,7 @@ textFile = open(fileName, "w")
 textFile.write(dataBaseStructure)
 textFile.close()
 
-#%% Save to csv data 1
+#%% Save to csv data 2
 fileName = 'dataFromSonoratTest.csv'
 textFile = open(fileName, "w")
 textFile.write(dataBaseStructuretTest)
